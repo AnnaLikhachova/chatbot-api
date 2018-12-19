@@ -68,6 +68,10 @@ public class QuickReply extends AbstractJson {
 		return text(title, payload, null);
 	}
 
+	public static QuickReply image(String title, String imageUrl){
+		return text(title, title, imageUrl);
+	}
+
 	public static QuickReply text(String title, String payload, String imageUrl) {
 		return new QuickReply("text", title, payload, imageUrl);
 	}
